@@ -1,18 +1,23 @@
-$('#Register').click(function(){
-    document.getElementById('Container').style.transform = 'rotateY(360deg)';
+let register = document.getElementById('Register');
+let login = document.getElementById('Login');
+let container = document.getElementById('Container');
+
+register.addEventListener('click', () =>{
+    container.style.transform = 'rotateX(360deg) rotateY(360deg)'
+
     setTimeout(function(){
         document.getElementById('LoginContainer').style.display = 'none';
         document.getElementById('RegisterContainer').style.display = 'flex';
 
     }, 400);
-});
-$('#Login').click(function(){
-    document.getElementById('Container').style.transform = 'rotateY(0deg)';
+})
+
+login.addEventListener('click', () => {
+    container.style.transform = 'rotateX(0deg) rotateY(0deg)'
+
     setTimeout(function(){
         document.getElementById('LoginContainer').style.display = 'flex';
         document.getElementById('RegisterContainer').style.display = 'none';
 
     }, 400);
-});
-
-
+})
